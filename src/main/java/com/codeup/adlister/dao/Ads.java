@@ -10,5 +10,10 @@ public interface Ads {
     // insert a new ad and return the new ad's id
     Long insert(Ad ad);
 
+
     Ad getAdById (long id);
+
+    // grabbing ads based off of user_id
+    List<Ad> getAdsByUserId(Long userId);
+
 }
