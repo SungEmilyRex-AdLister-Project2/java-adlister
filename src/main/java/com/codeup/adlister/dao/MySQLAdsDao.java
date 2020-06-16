@@ -65,7 +65,7 @@ public class MySQLAdsDao implements Ads {
             rs.next();
             return extractAd(rs);
         } catch (SQLException e) {
-            throw new RuntimeException("Error finding a user by username", e);
+            throw new RuntimeException("Error finding an ad by ID", e);
         }
     }
 

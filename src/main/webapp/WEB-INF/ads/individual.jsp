@@ -18,14 +18,14 @@
     <jsp:include page="/WEB-INF/partials/navbar.jsp" />
 <div>
 
-    <h1>Viewing individual ad</h1>
-
         <div class="col-md-6">
-            <h2>${ad.title}</h2>
+            <h1>${ad.title}</h1>
+            <h3>Description</h3>
             <p>${ad.description}</p>
+            <h3>Created by</h3>
             <p>${adOwner.username}</p>
-
-
+            <h3>Contact Info</h3>
+            <p>${adOwner.email}</p>
         </div>
 
 </div>

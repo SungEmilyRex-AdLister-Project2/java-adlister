@@ -15,11 +15,14 @@ import java.io.IOException;
 public class IndividualAdDetailsServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         long id = Long.parseLong(request.getParameter("id"));
-//        User adOwner = null;
+
         try{
+
             Ad ad = DaoFactory.getAdsDao().getAdById(id);
-//            adOwner = DaoFactory.getUsersDao().
+            User adOwner = DaoFactory.getUsersDao().findUserById(ad.getUserId());
             request.setAttribute("ad", ad);
+            request.setAttribute("adOwner", adOwner);
+
         }catch(IndexOutOfBoundsException e){
             e.printStackTrace();
         }
