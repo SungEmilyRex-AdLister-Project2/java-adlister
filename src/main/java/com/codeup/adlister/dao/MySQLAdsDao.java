@@ -56,7 +56,6 @@ public class MySQLAdsDao implements Ads {
     }
 
     @Override
-
     public Ad getAdById(long id) {
         String query = "SELECT * FROM ads WHERE id = ? LIMIT 1";
         try {
@@ -65,16 +64,19 @@ public class MySQLAdsDao implements Ads {
             ResultSet rs = stmt.executeQuery();
             rs.next();
             return extractAd(rs);
+        } catch (SQLException e) {
+            throw new RuntimeException("Error finding an ad by ID", e);
+        }
+    }
 
     public List<Ad> getAdsByUserId(Long userId) {
-        String query = "SELECT * FROM ads WHERE user_id = ? LIMIT 1";
+        String query = "SELECT * FROM ads WHERE user_id = ?";
         try {
             PreparedStatement stmt = connection.prepareStatement(query);
             stmt.setString(1, String.valueOf(userId));
             ResultSet rs = stmt.executeQuery();
             rs.next();
             return createAdsFromResults(rs);
-
         } catch (SQLException e) {
             throw new RuntimeException("Error finding an ad by ID", e);
         }
@@ -97,3 +99,4 @@ public class MySQLAdsDao implements Ads {
         return ads;
     }
 }
+
