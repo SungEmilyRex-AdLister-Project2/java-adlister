@@ -4,6 +4,14 @@
         <div class="navbar-header">
             <a class="navbar-brand" href="/ads">Adlister</a>
         </div>
+
+        <input type="text" placeholder="Search">
+        <button type="search">
+            <a href="/ads">
+            Search
+            </a>
+        </button>
+
         <ul class="nav navbar-nav navbar-right">
             <li><a href="/login">Login</a></li>
             <li><a href="/logout">Logout</a></li>
