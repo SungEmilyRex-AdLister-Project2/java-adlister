@@ -10,9 +10,10 @@ import java.io.IOException;
 @WebServlet(name = "controllers.IndividualAdDetailsServlet", urlPatterns = "/individual")
 public class IndividualAdDetailsServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        if (request.getSession().getAttribute("id") == null) {
-            response.sendRedirect("/ads");
-            return;
+        String id = request.getParameter("id");
+        request.getRequestDispatcher("/WEB-INF/ads/individual.jsp").forward(request, response);
+
+
         }
 }
-}
+
