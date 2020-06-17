@@ -18,7 +18,6 @@
             <p>${ad.description}</p>
             <a href="/individual?id=${ad.id}">Show Individual ad</a>
         </div>
-        <p></p>
     </c:forEach>
 </div>
 
