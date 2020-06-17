@@ -13,9 +13,7 @@
     </div>
     <br>
 <%--    need to add margin--%>
-<%--        should this href be the jsp page not this localhost url?
-    what if we have different local host #s?--%>
-        <p>Would you like to <a href="http://localhost:8080/ads/create">create an ad?</a></p>
+        <p>Would you like to <a href="/ads/create">create an ad?</a></p>
     </div>
 
 </body>
