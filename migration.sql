@@ -2,7 +2,6 @@ USE adlister_db;
 
 DROP TABLE IF EXISTS ads;
 DROP TABLE IF EXISTS users;
--- should it be drop table- create table if not exists?...
 DROP TABLE IF EXISTS categories;
 DROP TABLE IF EXISTS ad_category;
 
@@ -11,7 +10,8 @@ CREATE TABLE users (
     username VARCHAR(240) NOT NULL,
     email VARCHAR(240) NOT NULL,
     password VARCHAR(255) NOT NULL,
-    PRIMARY KEY (id)
+    PRIMARY KEY (id),
+    UNIQUE KEY unique_username (username)
 );
 
 CREATE TABLE ads (
