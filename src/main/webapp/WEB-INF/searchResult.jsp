@@ -1,8 +1,8 @@
 <%--
   Created by IntelliJ IDEA.
-  User: rexsutton
-  Date: 6/16/20
-  Time: 9:12 AM
+  User: Sungillest
+  Date: 6/17/20
+  Time: 11:46 AM
   To change this template use File | Settings | File Templates.
 --%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
@@ -16,19 +16,13 @@
 </head>
 <body>
     <jsp:include page="/WEB-INF/partials/navbar.jsp" />
-<div>
-
+    <h1>Here are All the Ads</h1>
+    <c:forEach var="ad" items="${ads}">
         <div class="col-md-6">
-            <h1>${ad.title}</h1>
-            <h3>Description</h3>
+            <h2>${ad.title}</h2>
             <p>${ad.description}</p>
-            <h3>Created by</h3>
-            <p>${adOwner.username}</p>
-            <h3>Contact Info</h3>
-            <p>${adOwner.email}</p>
+            <a href="/individual?id=${ad.id}">Show Individual ad</a>
         </div>
-
-</div>
-
+    </c:forEach>
 </body>
 </html>

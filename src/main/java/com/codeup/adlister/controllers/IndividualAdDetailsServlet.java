@@ -30,7 +30,6 @@ public class IndividualAdDetailsServlet extends HttpServlet {
 
         request.getRequestDispatcher("/WEB-INF/ads/individual.jsp").forward(request, response);
 
-
         }
 }
 

@@ -16,4 +16,7 @@ public interface Ads {
     // grabbing ads based off of user_id
     List<Ad> getAdsByUserId(Long userId);
 
+    // search ad/ads
+    List<Ad> searchByAd(String param);
+
 }
