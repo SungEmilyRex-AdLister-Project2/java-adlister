@@ -12,11 +12,9 @@
         <h1>Welcome, ${sessionScope.user.username}!</h1>
     </div>
     <br>
+    <div style="margin-left: 5em" >
 <%--    need to add margin--%>
         <p>Would you like to <a href="/ads/create">create an ad?</a></p>
-    </div>
-
-    <div>
         <a href="/showUsersAds?id=${sessionScope.user.id}">Show all of your ads</a>
 
     </div>
