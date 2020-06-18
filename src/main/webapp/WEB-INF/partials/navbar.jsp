@@ -9,6 +9,14 @@
             <li><a href="/profile">Profile</a></li>
             <li><a href="/login">Login</a></li>
             <li><a href="/logout">Logout</a></li>
+            <li>
+                <form action="/searchResult" method="GET">
+                <input name="search" type="text" placeholder="Search"> <!-- Make sure to name the name so that  -->
+                <button type="submit">
+                    Search
+                </button>
+                </form>
+          </li>
         </ul>
     </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
