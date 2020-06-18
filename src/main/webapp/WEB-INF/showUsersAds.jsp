@@ -19,6 +19,11 @@
     <div class="col-md-6">
     <h2>${ad.title}</h2>
     <p>${ad.description}</p>
+        <form action="/DeleteAd" method="post">
+            <input type="hidden" name="id" value="${ad.id}">
+            <button name="delete" class="btn btn-danger">
+            Delete this ad
+        </button></form>
     </div>
 </c:forEach>
 </body>
