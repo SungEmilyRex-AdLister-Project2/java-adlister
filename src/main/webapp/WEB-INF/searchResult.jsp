@@ -16,7 +16,7 @@
 </head>
 <body>
     <jsp:include page="/WEB-INF/partials/navbar.jsp" />
-    <h1>Here are All the Ads</h1>
+    <h1 style="margin-left: 15px">Here are All the Ads</h1>
     <c:forEach var="ad" items="${ads}">
         <div class="col-md-6">
             <h2>${ad.title}</h2>
