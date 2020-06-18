@@ -10,12 +10,14 @@
             <li><a href="/login">Login</a></li>
             <li><a href="/logout">Logout</a></li>
             <li>
+<%--                <div class="d-flex align-items-center">--%>
                 <form action="/searchResult" method="GET">
-                <input name="search" type="text" placeholder="Search"> <!-- Make sure to name the name so that  -->
+                <input style="margin-top: 1em"  name="search" type="text" placeholder="Search"> <!-- Make sure to name the name so that  -->
                 <button type="submit">
                     Search
                 </button>
                 </form>
+<%--                </div>--%>
           </li>
         </ul>
     </div><!-- /.navbar-collapse -->
