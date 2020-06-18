@@ -28,10 +28,9 @@ public class ShowUserAdServlet extends HttpServlet {
         }catch(IndexOutOfBoundsException e){
             e.printStackTrace();
         }
-
-
         request.getRequestDispatcher("/WEB-INF/showUsersAds.jsp").forward(request, response);
 
 
     }
+
 }
