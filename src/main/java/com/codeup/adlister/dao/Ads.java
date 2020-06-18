@@ -13,6 +13,7 @@ public interface Ads {
 
     Ad getAdById (long id);
 
+
     // grabbing ads based off of user_id
     List<Ad> getAdsByUserId(Long userId);
 
