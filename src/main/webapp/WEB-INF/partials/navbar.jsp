@@ -16,7 +16,7 @@
                     Search
                 </button>
                 </form>
-          </li>
+            </li>
         </ul>
     </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
