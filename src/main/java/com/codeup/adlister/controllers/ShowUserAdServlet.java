@@ -15,10 +15,15 @@ import java.util.List;
 @WebServlet(name = "controllers.ShowUserAdServlet", urlPatterns = "/showUsersAds")
 public class ShowUserAdServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        long userId = Long.parseLong(request.getParameter("id"));
+        long userId;
 
         try{
-
+            User currentUser = (User) request.getSession().getAttribute("user");
+            if (request.getParameter("id") == null) {
+                userId = currentUser.getId();
+            } else {
+               userId = Long.parseLong(request.getParameter("id"));
+            }
             List<Ad> ads = DaoFactory.getAdsDao().getAdsByUserId(userId);
 //            System.out.println(ads.get(0).getTitle());
             User adOwner = DaoFactory.getUsersDao().findUserById(userId);

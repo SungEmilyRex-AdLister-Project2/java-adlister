@@ -15,11 +15,15 @@ public class DeleteAdServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         long adId = Long.parseLong(request.getParameter("id"));
         try {
-            DaoFactory.getAdsDao().getAdById(adId);
+//            Long deleteAd = DaoFactory.getAdsDao().getAdById(adId);
+//            deleteAd.delete()
+
+            DaoFactory.getAdsDao().delete(adId);
+            response.sendRedirect("/showUsersAds");
         } catch (Exception e) {
             e.printStackTrace();
         }
-        request.getRequestDispatcher("/ads").forward(request, response);
+//        request.getRequestDispatcher("/ads").forward(request, response);
     }
 
 }
