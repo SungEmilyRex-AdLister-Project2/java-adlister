@@ -16,5 +16,10 @@
         <p>Would you like to <a href="/ads/create">create an ad?</a></p>
     </div>
 
+    <div>
+        <a href="/showUsersAds?id=${sessionScope.user.id}">Show all of your ads</a>
+
+    </div>
+
 </body>
 </html>

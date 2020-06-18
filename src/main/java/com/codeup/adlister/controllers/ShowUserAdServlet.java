@@ -12,14 +12,15 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
 
-@WebServlet(name = "controllers.ShowUserAdServlet", urlPatterns = "/userad")
+@WebServlet(name = "controllers.ShowUserAdServlet", urlPatterns = "/showUsersAds")
 public class ShowUserAdServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        long userId = Long.parseLong(request.getParameter("userId"));
+        long userId = Long.parseLong(request.getParameter("id"));
 
         try{
 
             List<Ad> ads = DaoFactory.getAdsDao().getAdsByUserId(userId);
+//            System.out.println(ads.get(0).getTitle());
             User adOwner = DaoFactory.getUsersDao().findUserById(userId);
             request.setAttribute("ads", ads);
             request.setAttribute("adOwner", adOwner);
@@ -29,7 +30,7 @@ public class ShowUserAdServlet extends HttpServlet {
         }
 
 
-        request.getRequestDispatcher("/WEB-INF/ads/individual.jsp").forward(request, response);
+        request.getRequestDispatcher("/WEB-INF/showUsersAds.jsp").forward(request, response);
 
 
     }

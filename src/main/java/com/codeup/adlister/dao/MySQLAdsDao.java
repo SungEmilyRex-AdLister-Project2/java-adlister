@@ -75,7 +75,6 @@ public class MySQLAdsDao implements Ads {
             PreparedStatement stmt = connection.prepareStatement(query);
             stmt.setString(1, String.valueOf(userId));
             ResultSet rs = stmt.executeQuery();
-            rs.next();
             return createAdsFromResults(rs);
         } catch (SQLException e) {
             throw new RuntimeException("Error finding an ad by ID", e);
