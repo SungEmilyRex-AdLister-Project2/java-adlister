@@ -12,7 +12,7 @@
             <li>
 <%--                <div class="d-flex align-items-center">--%>
                 <form action="/searchResult" method="GET">
-                <input style="margin-top: 1em"  name="search" type="text" placeholder="Search Ads"> <!-- Make sure to name the name so that  -->
+                <input style="margin-top: 1em; color: black"  name="search" type="text" placeholder="Search Ads"> <!-- Make sure to name the name so that  -->
                 <button type="submit" style="margin-right: 1em; color: black">
                     Search
                 </button>
