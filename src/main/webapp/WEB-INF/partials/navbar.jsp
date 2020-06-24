@@ -10,15 +10,15 @@
             <li><a href="/login" style="color: white">Login</a></li>
             <li><a href="/logout" style="color: white">Logout</a></li>
             <li>
-<%--                <div class="d-flex align-items-center">--%>
+                <%--                <div class="d-flex align-items-center">--%>
                 <form action="/searchResult" method="GET">
                 <input style="margin-top: 1em"  name="search" type="text" placeholder="Search Ads"> <!-- Make sure to name the name so that  -->
                 <button type="submit" style="margin-right: 1em; color: black">
                     Search
                 </button>
                 </form>
-<%--                </div>--%>
-          </li>
+                <%--                </div>--%>
+            </li>
         </ul>
     </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
